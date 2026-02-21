@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rentals in Waghodiya | RentHelper</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header>
+    <div class="logo"><a href="index.html">🏠 RentHelper</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="listing.html" class="active">View Houses</a>
+      <a href="contact.html">Book Appointment</a>
+      <a href="faq.html">FAQ / Help</a>
+    </nav>
+  </header>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-overline">Waghodiya, Vadodara</div>
+      <h1>Available <em>Rentals</em></h1>
+      <p>16 verified properties across 3 budget categories</p>
+    </div>
+  </div>
+
+  <!-- Budget Jump Cards -->
+  <div class="budget-section">
+    <div class="budget-selection reveal">
+      <a href="#low" class="budget-card low-budget">
+        <h3>🎒 Student Budget</h3>
+        <p>₹4,000 – ₹7,000</p>
+        <span>5 listings · Per month</span>
+      </a>
+      <a href="#mid" class="budget-card mid-budget">
+        <h3>🧑‍🤝‍🧑 Middle Class</h3>
+        <p>₹7,000 – ₹15,000</p>
+        <span>6 listings · Per month</span>
+      </a>
+      <a href="#premium" class="budget-card premium-budget">
+        <h3>💎 Premium</h3>
+        <p>₹15,000+</p>
+        <span>6 listings · Per month</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- View Toggle -->
+  <div class="view-controls">
+    <span>View:</span>
+    <input type="radio" id="list-view" name="view-mode" checked>
+    <label for="list-view" class="view-btn">☰ List</label>
+
+    <input type="radio" id="grid-view" name="view-mode">
+    <label for="grid-view" class="view-btn">⊞ Grid</label>
+  </div>
+
+  <div class="listing-wrapper">
+
+    <!-- LOW BUDGET -->
+    <section id="low" class="category-section">
+      <div class="category-header">
+        <h2>Student Budget</h2>
+        <span class="category-tag">₹4,000 – ₹7,000 / month</span>
+      </div>
+      <div class="cards-grid">
+
+        <div class="house-card reveal">
+          <img src="images/lower1.jpg" alt="1BHK Near Parul University" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #101</div>
+            <h3>1 BHK — Near Parul University</h3>
+            <p class="condition"><strong>Condition:</strong> Semi-furnished, Good ventilation</p>
+            <p class="location">📍 Waghodiya Road, Opp. D-Mart</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹5,000</td></tr>
+              <tr><td>Broker Commission</td><td>₹2,500</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹7,500</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 98765 43210</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/lower2.jpg" alt="Single Occupancy Room" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #102</div>
+            <h3>Single Occupancy Room — Near GIDC</h3>
+            <p class="condition"><strong>Condition:</strong> Basic unfurnished, Attached bathroom</p>
+            <p class="location">📍 Waghodiya GIDC Back Road</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹4,500</td></tr>
+              <tr><td>Broker Commission</td><td>₹2,000</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹6,500</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 90123 45678</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/lower3.jpg" alt="1 RK Studio" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #103</div>
+            <h3>1 RK Studio Apartment — Shared Balcony</h3>
+            <p class="condition"><strong>Condition:</strong> Unfurnished, New wiring and plumbing</p>
+            <p class="location">📍 Near Vuda Circle, Waghodiya</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹4,000</td></tr>
+              <tr><td>Broker Commission</td><td>₹2,000</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹6,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 81234 56789</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/lower4.jpg" alt="Small 1BHK" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #104</div>
+            <h3>Small 1 BHK — Close to Market Area</h3>
+            <p class="condition"><strong>Condition:</strong> Good natural light, older building</p>
+            <p class="location">📍 Main Bazaar Road, Waghodiya</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹6,500</td></tr>
+              <tr><td>Broker Commission</td><td>₹3,000</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹9,500</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 70011 22334</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/lower5.jpg" alt="Double Sharing Room" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #105</div>
+            <h3>Double Sharing Room — Hostel Setup</h3>
+            <p class="condition"><strong>Condition:</strong> Includes bed, study table, and fan</p>
+            <p class="location">📍 Parul University Service Road</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹5,500</td></tr>
+              <tr><td>Broker Commission</td><td>₹2,500</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹8,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 99887 76655</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MID RANGE -->
+    <section id="mid" class="category-section">
+      <div class="category-header">
+        <h2>Middle Class Budget</h2>
+        <span class="category-tag">₹7,000 – ₹15,000 / month</span>
+      </div>
+      <div class="cards-grid">
+
+        <div class="house-card reveal">
+          <img src="images/mid1.jpg" alt="2BHK Family House" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #201</div>
+            <h3>2 BHK House — Family Friendly</h3>
+            <p class="condition"><strong>Condition:</strong> New construction, Modular kitchen, Balcony</p>
+            <p class="location">📍 Near Ajwa Road, Prime Residency</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹10,000</td></tr>
+              <tr><td>Broker Commission (1 Month)</td><td>₹10,000</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹20,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 91029 30485</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/mid2.jpg" alt="1BHK Spacious" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #202</div>
+            <h3>1 BHK Spacious — Ideal for Professionals</h3>
+            <p class="condition"><strong>Condition:</strong> Fully furnished (Bed, Fridge, Sofa), AC</p>
+            <p class="location">📍 Hanuman Temple Road, Opp. Reliance Mart</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹12,500</td></tr>
+              <tr><td>Broker Commission (1 Month)</td><td>₹12,500</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹25,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 88001 12233</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/mid3.jpg" alt="3BHK Unfurnished" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #203</div>
+            <h3>3 BHK Unfurnished — Large Family</h3>
+            <p class="condition"><strong>Condition:</strong> Brand new, Open terrace, Reserved parking</p>
+            <p class="location">📍 Near Sardar Patel Ring Road, Waghodiya</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹14,000</td></tr>
+              <tr><td>Broker Commission (1 Month)</td><td>₹14,000</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹28,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 97654 32109</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/mid4.jpg" alt="2BHK Semi-furnished" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #204</div>
+            <h3>2 BHK — Semi-furnished with Wardrobes</h3>
+            <p class="condition"><strong>Condition:</strong> Recently renovated, 24/7 water supply</p>
+            <p class="location">📍 Vrundavan Complex, Opp. IDFC Bank</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹8,500</td></tr>
+              <tr><td>Broker Commission (1 Month)</td><td>₹8,500</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹17,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 96543 21098</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/mid5.jpg" alt="Gated Society" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #205</div>
+            <h3>3 BHK in Gated Society — Security Included</h3>
+            <p class="condition"><strong>Condition:</strong> Excellent security, Access to common garden</p>
+            <p class="location">📍 Global Residency, Near Parul University</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹7,000</td></tr>
+              <tr><td>Broker Commission (1 Month)</td><td>₹7,000</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹14,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 80001 10002</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/mid6.jpg" alt="Ground Floor Apartment" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #206</div>
+            <h3>2 BHK Ground Floor — Easy Access</h3>
+            <p class="condition"><strong>Condition:</strong> Ideal for elderly, Open parking slot</p>
+            <p class="location">📍 Shivam Complex, Behind Domino's Pizza</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹9,500</td></tr>
+              <tr><td>Broker Commission (1 Month)</td><td>₹9,500</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹19,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 77889 90011</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PREMIUM -->
+    <section id="premium" class="category-section">
+      <div class="category-header">
+        <h2>Premium Bungalows</h2>
+        <span class="category-tag">₹15,000+ / month</span>
+      </div>
+      <div class="cards-grid">
+
+        <div class="house-card reveal">
+          <img src="images/upper1.jpg" alt="3BHK Bungalow" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #301</div>
+            <h3>3 BHK Fully Furnished Bungalow</h3>
+            <p class="condition"><strong>Condition:</strong> Newly painted, AC in all rooms, Modular kitchen</p>
+            <p class="location">📍 Narayan Gardens, Waghodiya</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹18,000</td></tr>
+              <tr><td>Broker Commission (1 Month)</td><td>₹18,000</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹36,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 99009 90099</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/upper2.jpg" alt="4BHK Luxury Villa" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #302</div>
+            <h3>4 BHK Luxury Villa — Private Garden</h3>
+            <p class="condition"><strong>Condition:</strong> High-end fittings, Servant quarter, 2-car parking</p>
+            <p class="location">📍 VIP Road Extension, Premium Area</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹35,000</td></tr>
+              <tr><td>Broker Commission (2 Months)</td><td>₹70,000</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹1,05,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 87654 32101</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/upper3.jpg" alt="3BHK with Driveway" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #303</div>
+            <h3>3 BHK House — w/ Driveway</h3>
+            <p class="condition"><strong>Condition:</strong> Top floor, Private terrace, Uninterrupted views</p>
+            <p class="location">📍 Near Parul University Main Gate</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹22,000</td></tr>
+              <tr><td>Broker Commission (1 Month)</td><td>₹22,000</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹44,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 93210 98765</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/upper4.jpg" alt="3BHK Duplex" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #304</div>
+            <h3>3 BHK Duplex — Corner Plot</h3>
+            <p class="condition"><strong>Condition:</strong> Semi-furnished, Water tank, Pet-friendly</p>
+            <p class="location">📍 Canal Road, Deluxe Residency</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹16,500</td></tr>
+              <tr><td>Broker Commission (1 Month)</td><td>₹16,500</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹33,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 90909 09090</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="house-card reveal">
+          <img src="images/upper5.jpg" alt="5BHK Farm House" class="house-img">
+          <div class="house-details">
+            <div class="house-id">ID #305</div>
+            <h3>5 BHK Farm House — Large Gatherings</h3>
+            <p class="condition"><strong>Condition:</strong> Huge compound, Fully equipped kitchen, Driver's room</p>
+            <p class="location">📍 Outskirts of Waghodiya, Near Highway</p>
+            <table class="price-table">
+              <tr><td>Monthly Rent</td><td>₹45,000</td></tr>
+              <tr><td>Broker Commission (2 Months)</td><td>₹90,000</td></tr>
+              <tr class="total-row"><td><strong>First Month Total</strong></td><td><strong>₹1,35,000</strong></td></tr>
+            </table>
+            <div class="contact-actions">
+              <a href="contact.html" class="btn-book">📅 Book Appointment</a>
+              <div class="contact-info">📞 Broker: 88997 76655</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /listing-wrapper -->
+
+  <footer>
+    <p>&copy; 2025 Waghodiya RentHelper Project.<br>
+    Designed by Nikhil Paliwal, Gunjan Rao, Harsh Kuniya &amp; Devdatt Bhardwaj.</p>
+  </footer>
+
+  <script>
+    const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.transform=`translate(${mx-5}px,${my-5}px)`;});
+    (function loop(){rx+=(mx-rx-18)*0.12;ry+=(my-ry-18)*0.12;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(loop);})();
+    document.querySelectorAll('a,button,.budget-card,.house-card').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{cur.classList.add('grow');ring.classList.add('grow');});
+      el.addEventListener('mouseleave',()=>{cur.classList.remove('grow');ring.classList.remove('grow');});
+    });
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>

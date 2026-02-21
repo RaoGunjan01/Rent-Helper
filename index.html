@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waghodiya RentHelper — Find Your Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header id="header">
+    <div class="logo"><a href="index.html">🏠 RentHelper</a></div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="listing.html">View Houses</a>
+      <a href="contact.html">Book Appointment</a>
+      <a href="faq.html">FAQ / Help</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Waghodiya, Vadodara — Since 2025
+      </div>
+
+      <h1>
+        <span>Find your perfect</span>
+        <span>home in Waghodiya</span>
+      </h1>
+
+      <p>
+        Verified listings near Parul University, Sumandeep &amp; Waghodiya GIDC.
+        Transparent pricing, no hidden fees — just your next home.
+      </p>
+
+      <div class="hero-cta-row">
+        <a href="listing.html" class="cta-button">View All Listings →</a>
+        <a href="contact.html" class="btn btn-secondary">Book a Visit</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">16+</span>
+          <span class="hero-stat-label">Active Listings</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">3</span>
+          <span class="hero-stat-label">Budget Ranges</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">2</span>
+          <span class="hero-stat-label">Trusted Brokers</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">₹4K</span>
+          <span class="hero-stat-label">Starting Rent</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features container">
+    <h2>Why Choose <em style="color:var(--gold);">RentHelper?</em></h2>
+    <div class="feature-grid">
+      <div class="feature-card reveal reveal-d1">
+        <h3>📍 Prime Locations</h3>
+        <p>Houses near Parul University, Sumandeep, and Waghodiya GIDC — where you actually need to be.</p>
+      </div>
+      <div class="feature-card reveal reveal-d2">
+        <h3>💰 Transparent Commission</h3>
+        <p>We show exactly how much the broker charges upfront. No surprises on move-in day.</p>
+      </div>
+      <div class="feature-card reveal reveal-d3">
+        <h3>✅ Verified Conditions</h3>
+        <p>We personally check water supply, electricity, and furnishings before any listing goes live.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Waghodiya RentHelper Project.<br>
+    Designed by Nikhil Paliwal, Gunjan Rao, Harsh Kuniya &amp; Devdatt Bhardwaj.</p>
+  </footer>
+
+  <script>
+    const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.transform=`translate(${mx-5}px,${my-5}px)`;});
+    (function loop(){rx+=(mx-rx-18)*0.12;ry+=(my-ry-18)*0.12;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(loop);})();
+    document.querySelectorAll('a,button,.feature-card,.hero-stat').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{cur.classList.add('grow');ring.classList.add('grow');});
+      el.addEventListener('mouseleave',()=>{cur.classList.remove('grow');ring.classList.remove('grow');});
+    });
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>

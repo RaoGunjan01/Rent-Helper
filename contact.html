@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment — RentHelper</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header>
+    <div class="logo"><a href="index.html">🏠 RentHelper</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="listing.html">View Houses</a>
+      <a href="contact.html" class="active">Book Appointment</a>
+      <a href="faq.html">FAQ / Help</a>
+    </nav>
+  </header>
+
+  <div class="form-page-wrapper">
+
+    <!-- Info Panel -->
+    <div class="form-info-panel">
+      <h2>Schedule a<br><em>House Visit</em></h2>
+      <p>Fill out the form and our broker will contact you to finalize the visit time and property details.</p>
+
+      <div class="info-items">
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <h4>Service Area</h4>
+            <p>Waghodiya, Parul University, GIDC &amp; Ajwa Road</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">⏱</div>
+          <div>
+            <h4>Response Time</h4>
+            <p>Broker contacts you within 2–4 hours of submission</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div>
+            <h4>Broker Rajesh</h4>
+            <p>Waghodiya Chowk · 98765 43210</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div>
+            <h4>Broker Amit</h4>
+            <p>Parul Area · 90123 45678</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📋</div>
+          <div>
+            <h4>What to Bring</h4>
+            <p>Aadhar Card, PAN Card, passport photos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Panel -->
+    <div class="form-panel">
+      <h2>Book an <em>Appointment</em></h2>
+
+      <form class="booking-form" id="bookingForm">
+        <div class="form-group">
+          <label for="name">Your Full Name</label>
+          <input type="text" id="name" name="Visitor_Name" placeholder="e.g. Rahul Sharma" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="Phone_Number" placeholder="e.g. 98765 43210" required>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Interested In</label>
+          <select id="category" name="House_Category">
+            <option value="Low_Budget">🎒 Low Budget (1 BHK / Single Room)</option>
+            <option value="Mid_Range">🧑‍🤝‍🧑 Mid Range (Flat / 2–3 BHK)</option>
+            <option value="Premium">💎 Premium (Bungalow / Villa)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="broker">Select Broker</label>
+          <select id="broker" name="Broker_Name">
+            <option value="Broker_Rajesh">Rajesh — Waghodiya Chowk</option>
+            <option value="Broker_Amit">Amit — Parul Area</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Visit Date</label>
+          <input type="date" id="date" name="Visit_Date" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Confirm Appointment →</button>
+      </form>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Waghodiya RentHelper Project.<br>
+    Designed by Nikhil Paliwal, Gunjan Rao, Harsh Kuniya &amp; Devdatt Bhardwaj.</p>
+  </footer>
+
+  <script>
+    const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.transform=`translate(${mx-5}px,${my-5}px)`;});
+    (function loop(){rx+=(mx-rx-18)*0.12;ry+=(my-ry-18)*0.12;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(loop);})();
+    document.querySelectorAll('a,button,.info-item').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{cur.classList.add('grow');ring.classList.add('grow');});
+      el.addEventListener('mouseleave',()=>{cur.classList.remove('grow');ring.classList.remove('grow');});
+    });
+
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.Visitor_Name.value;
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = '✓ Appointment Confirmed!';
+      btn.style.background = 'var(--teal)';
+      btn.disabled = true;
+      setTimeout(() => { window.location.href = 'index.html'; }, 2200);
+    });
+  </script>
+</body>
+</html>

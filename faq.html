@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — RentHelper</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <header>
+    <div class="logo"><a href="index.html">🏠 RentHelper</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="listing.html">View Houses</a>
+      <a href="contact.html">Book Appointment</a>
+      <a href="faq.html" class="active">FAQ / Help</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-overline">Help Centre</div>
+      <h1>Frequently <em>Asked</em></h1>
+      <p>Rules, legalities, and how our service works — answered clearly.</p>
+    </div>
+  </div>
+
+  <div class="faq-page container reveal">
+    <p>Quick answers about renting in Waghodiya — covering security deposits, broker fees, documentation, and tenant rights.</p>
+
+    <div class="faq-section">
+
+      <details>
+        <summary>1. What is the standard duration of a rental agreement?</summary>
+        <p>Rental agreements in India are typically drafted for 11 months. This duration avoids the need for property registration, reducing stamp duty and legal fees — though the contract remains fully binding on both parties.</p>
+      </details>
+
+      <details>
+        <summary>2. How much is the security deposit, and when is it refunded?</summary>
+        <p>The standard security deposit ranges from 1 to 3 months' rent, depending on the property type and location. It is refunded within 30–60 days after vacating the property, minus any deductions for damages or pending utility bills.</p>
+      </details>
+
+      <details>
+        <summary>3. What is the Broker Commission mentioned in listings?</summary>
+        <p>The Broker Commission (brokerage fee) is a one-time service charge paid to the broker for finding the property and facilitating the agreement between tenant and owner. This is typically equivalent to one month's rent or a fixed fee — explicitly listed with every property.</p>
+      </details>
+
+      <details>
+        <summary>4. Are utilities included in the monthly rent?</summary>
+        <p>No — utilities are generally not included. The tenant is responsible for monthly water, electricity, and gas bills based on consumption. The rent covers only the property usage itself.</p>
+      </details>
+
+      <details>
+        <summary>5. Who is responsible for minor repairs?</summary>
+        <p>Minor routine repairs (bulb replacements, tap fixtures, drainage clogs) are typically the tenant's responsibility. Major structural repairs — seepage, electrical faults, structural damage — are the landlord's responsibility.</p>
+      </details>
+
+      <details>
+        <summary>6. Can I move out before the 11-month contract ends?</summary>
+        <p>Yes, but the agreement typically requires a 30–60 day notice period to the landlord. If the notice period isn't served, a penalty — often forfeiture of some or all of the security deposit — may apply.</p>
+      </details>
+
+      <details>
+        <summary>7. Is police verification mandatory for tenants?</summary>
+        <p>Yes. Police verification is legally mandatory in Vadodara and most of Gujarat, and is usually facilitated by the landlord or broker after the agreement is signed. It is a standard, straightforward process.</p>
+      </details>
+
+      <details>
+        <summary>8. What documents do I need to secure a property?</summary>
+        <p>You will typically need a copy of your Aadhar Card, PAN Card, passport-size photographs, and employment or student verification documents. Having these ready speeds up the process significantly.</p>
+      </details>
+
+      <details>
+        <summary>9. What does "Semi-furnished" mean in listings?</summary>
+        <p>Semi-furnished means the property includes basic fixtures like fans, lights, geysers, and modular kitchen cabinets. It does not typically include beds, sofas, or major appliances unless specifically mentioned in the listing.</p>
+      </details>
+
+      <details>
+        <summary>10. How do I book a viewing through RentHelper?</summary>
+        <p>Click "Book Appointment" in the navigation or use the booking form on our Contact page. Fill in your details and preferred date — our broker will contact you within 2–4 hours to confirm the visit.</p>
+      </details>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Waghodiya RentHelper Project.<br>
+    Designed by Nikhil Paliwal, Gunjan Rao, Harsh Kuniya &amp; Devdatt Bhardwaj.</p>
+  </footer>
+
+  <script>
+    const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.transform=`translate(${mx-5}px,${my-5}px)`;});
+    (function loop(){rx+=(mx-rx-18)*0.12;ry+=(my-ry-18)*0.12;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(loop);})();
+    document.querySelectorAll('a,button,details,summary').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{cur.classList.add('grow');ring.classList.add('grow');});
+      el.addEventListener('mouseleave',()=>{cur.classList.remove('grow');ring.classList.remove('grow');});
+    });
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
